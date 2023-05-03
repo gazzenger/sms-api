@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  sms-api:
+    container_name: sms-api
+    image: sms-api:latest
+    restart: always
+    tty: true
+    networks:
+      - frontend
+
+networks:
+  frontend:
+    name: sms-api-net
